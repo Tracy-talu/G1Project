@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -35,4 +36,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+.Container{
+  width: 300px;
+  height:400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(161, 161, 196);
+  margin-left: 700px;
+  margin-top: 50px;
+  border-radius: 16px;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+  
+
+
+}
+.container.hover{
+  filter:scale(1);
+  transform: scale(1.2);
+  
+  
+}
+button{
+  background-color: rgb(166, 192, 231);
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #61dafb;
+  margin-top:250px ;
+  align-items: center;
+  margin-left: 88px;
+
 }

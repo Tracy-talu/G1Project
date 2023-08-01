@@ -1,11 +1,9 @@
-import './App.css';
-import OrderForm from './components/OrderForm';
 
+import './App.css';
+import Cart from './components/Cart';
 function App() {
   return (
-    <div className="foodOrders">
-     <OrderForm />
-    </div>
+    <Cart/>
   );
 }
 

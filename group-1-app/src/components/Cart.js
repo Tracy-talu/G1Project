@@ -17,32 +17,29 @@ function Cart() {
       alert("Item added!");
     }
   
-    const Card = food.map((food) => {
+    
         return(
-            <>
-            <din>
-                <nav>
-                <h1>Cart</h1>	
-                </nav>
-            </din>
-            <div className="Container">
-                <img src={food.image} alt=""/>
+        <>
+            
+            {food.map((food)=>(
+             
+             <div className="Container" key={food.id}>
+                <img src={food.image}></img>
+                
                 <div className="Card-body">
                     <h5 className="card-title" >{food.food}</h5>
                     <h5 className="card-title" >{food.price}</h5>
                     
-                    <button onClick={added} className="btn btn-succes">Add To Cart</button>
-                    <button className="remove" onClick={remove} style={{backgroundColor:"red",BorderRadius:"5px"}}>Remove From Cart</button>
+                    <button onClick={added} className="btn"style={{backgroundColor:"lightblue"}}>Add To Cart</button>
+                    <button className="remove" onClick={remove} style={{backgroundColor:"lightblue",BorderRadius:"5px"}}>Remove From Cart</button>
                 </div>
-            </div>
+               </div>
+               
+            ))}
+             </>
           
-            </>
-        )
 
-    })
-    
-    
-    
-  
-}
+        ) 
+}   
+
 export default Cart

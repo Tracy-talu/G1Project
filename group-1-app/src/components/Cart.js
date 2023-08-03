@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+
 function Cart() {
   const [food, setFood] = useState([]);
   const [cartItems, setCartItems] = useState([]);
@@ -20,6 +21,8 @@ function Cart() {
     setCartItems([...cartItems, item]);
   }
 let Price=0
+
+
   return (
     <>
       {food.map((food) => {
@@ -39,18 +42,10 @@ let Price=0
         >
           Add To Cart
         </button>
-        <button
-          className="remove"
-          onClick={() =>
-            remove(cartItems.findIndex((item) => item.item === food.food))
-          }
-          style={{ backgroundColor: "lightblue", borderRadius: "5px" }}
-        >
-          Remove From Cart
-        </button>
+       
       </div>
     </div>
-  );
+  )
 })}
 
 
@@ -72,7 +67,7 @@ let Price=0
                 <td>{item.price}</td>
                 <th>{Price}</th>
                 <td>
-                  <button  style={{backgroundColor:"lightblue"}} onClick={() => remove(index)}>Remove</button>
+                  <button  style={{backgroundColor:"red"}} onClick={() => remove(index)}>Remove</button>
                 </td>
               </tr>
             ))}
@@ -83,4 +78,4 @@ let Price=0
   );
 }
 
-export default Cart;
+export default Cart
